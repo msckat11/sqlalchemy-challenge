@@ -7,7 +7,12 @@ app = Flask(__name__)
 #Define homepage
 @app.route("/")
 def home():
-    return "Available Routes:    /api/v1.0/precipitation    /api/v1.0/stations      /api/v1.0/tobs      /api/v1.0/<start>       /api/v1.0/<start>/<end>"
+    return """<h1>Available Routes:</h1>
+    <h3>/api/v1.0/precipitation</h3>
+    <h3>/api/v1.0/stations</h3>
+    <h3>api/v1.0/tobs</h3>
+    <h3>/api/v1.0/startdate</h3>
+    <h3>/api/v1.0/startdate/enddate</h3>"""
 
 # Precipitation Route
 @app.route("/api/v1.0/precipitation")
